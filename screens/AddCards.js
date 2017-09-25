@@ -2,17 +2,8 @@
 /* eslint no-underscore-dangle: 0 */
 import React from 'react'
 import {connect} from 'react-redux'
-import {
-  Button,
-  Content,
-  Form,
-  H1,
-  Item,
-  Input,
-  Label,
-  Text,
-  View,
-} from 'native-base'
+import {KeyboardAvoidingView, View} from 'react-native'
+import {Button, Form, Item, Input, Label, Text} from 'native-base'
 import {createCard} from '../actions/decks'
 import s from '../styles'
 
@@ -50,10 +41,10 @@ class AddCards extends React.Component {
     const {deck, deckName} = this.props
     const {answer, question} = this.state
     return (
-      <Content padder>
-        <H1 style={[s.mt20, s.tc]}>
-          {`The deck "${deckName}" contains ${deck.length} cards`}
-        </H1>
+      <KeyboardAvoidingView behavior="padding" style={[s.flex1, s.ph10]}>
+        <Text
+          style={[s.gray, s.mt10]}
+        >{`"${deckName}" contains ${deck.length} cards`}</Text>
         <Form>
           <Item floatingLabel>
             <Label>The question</Label>
@@ -89,7 +80,7 @@ class AddCards extends React.Component {
             <Text>Submit the question</Text>
           </Button>
         </Form>
-      </Content>
+      </KeyboardAvoidingView>
     )
   }
 }

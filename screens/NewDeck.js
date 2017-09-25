@@ -1,17 +1,8 @@
 // @flow
 import React from 'react'
 import {connect} from 'react-redux'
-import {
-  Button,
-  Content,
-  Form,
-  H1,
-  Item,
-  Input,
-  Label,
-  Text,
-  View,
-} from 'native-base'
+import {KeyboardAvoidingView, View} from 'react-native'
+import {Button, Form, H1, Item, Input, Label, Text} from 'native-base'
 import {NavigationActions} from 'react-navigation'
 import {createDeck} from '../actions/decks'
 import s from '../styles'
@@ -54,7 +45,7 @@ class NewDeck extends React.Component {
     const {deckNames} = this.props
     const {deckName, submitted} = this.state
     return (
-      <Content padder>
+      <KeyboardAvoidingView behavior="padding" style={[s.flex1, s.ph10]}>
         <H1 style={[s.mt20, s.tc]}>What is the name of your new Deck ?</H1>
         <Form>
           <Item
@@ -77,7 +68,7 @@ class NewDeck extends React.Component {
             <Text>Create a new deck</Text>
           </Button>
         </Form>
-      </Content>
+      </KeyboardAvoidingView>
     )
   }
 }

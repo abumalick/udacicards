@@ -1,7 +1,8 @@
 // @flow
 import React from 'react'
 import {connect} from 'react-redux'
-import {Button, Content, H1, H2, Text, View} from 'native-base'
+import {View} from 'react-native'
+import {Button, H1, H3, Text} from 'native-base'
 import s from '../styles'
 import {cardNumberText} from '../utils'
 
@@ -14,25 +15,27 @@ const Deck = ({
   deckName: String,
   navigation: Object,
 }) => (
-  <Content padder styles={[s.flex1, s.justifyAround]}>
-    <H1 style={[s.mt20, s.tc]}>{deckName}</H1>
-    <H2 style={[s.mt20, s.tc]}>{cardNumberText(deck.length)}</H2>
-    <Button
-      block
-      onPress={() => navigation.navigate('AddCards', {deckName})}
-      style={s.mt10}
-    >
-      <Text>Add Card</Text>
-    </Button>
-    <Button
-      block
-      disabled={deck.length === 0}
-      onPress={() => navigation.navigate('Quiz', {deckName})}
-      style={s.mt10}
-    >
-      <Text>Quiz</Text>
-    </Button>
-  </Content>
+  <View style={[s.flex1, s.justifyAround, s.ph10]}>
+    <View style={[s.flex1, s.justifyCenter]}>
+      <H1 style={[s.f30, s.fw6, s.tc]}>{deckName}</H1>
+      <H3 style={[s.gray, s.mt20, s.tc]}>{`(${cardNumberText(
+        deck.length,
+      )})`}</H3>
+    </View>
+    <View style={[s.flex1]}>
+      <Button block onPress={() => navigation.navigate('AddCards', {deckName})}>
+        <Text>Add Card</Text>
+      </Button>
+      <Button
+        block
+        disabled={deck.length === 0}
+        onPress={() => navigation.navigate('Quiz', {deckName})}
+        style={s.mt10}
+      >
+        <Text>Quiz</Text>
+      </Button>
+    </View>
+  </View>
 )
 Deck.navigationOptions = ({navigation}) => ({
   headerRight: <View />,
