@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:react-native/all",
+    "prettier",
+    "prettier/react"
+  ],
+  "env": {
+    "node": true
+  },
+  "globals": {
+    "__DEV__": true
+  },
+  "parser": "babel-eslint",
+  "plugins": ["react", "react-native"],
+  "rules": {
+    "global-require": 0,
+    "no-unexpected-multiline": 2,
+    "react/forbid-prop-types": 0,
+    "react/jsx-filename-extension": ["error", {"extensions": [".js", ".jsx"]}],
+    "react/jsx-wrap-multilines": 0,
+    "react-native/no-color-literals": 0
+  }
+}
