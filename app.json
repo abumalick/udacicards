@@ -14,6 +14,16 @@
     "sdkVersion": "20.0.0",
     "primaryColor": "#3d51b4",
     "privacy": "public",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "android": {
+      "icon": "icons/cards.png",
+      "package": "net.asbab.udacicards",
+      "versionCode": "10000",
+      "versionName": "1.0.0"
+    },
+    "ios": {
+      "buildNumber": "10000",
+      "bundleIdentifier": "net.asbab.udacicards"
+    }
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "udacicards",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "devDependencies": {
     "eslint": "^3.19.0 || ^4.3.0",
@@ -24,7 +24,11 @@
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js --watch",
     "flow": "flow",
-    "publish": "exp publish"
+    "publish": "exp publish",
+    "start:exp": "exp start",
+    "build:android": "exp build:android",
+    "build:ios": "exp build:ios",
+    "build:status": "exp build:status"
   },
   "jest": {
     "preset": "jest-expo"
