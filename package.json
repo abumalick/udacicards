@@ -23,7 +23,8 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js --watch",
-    "flow": "flow"
+    "flow": "flow",
+    "publish": "exp publish"
   },
   "jest": {
     "preset": "jest-expo"
@@ -32,6 +33,7 @@
     "@expo/vector-icons": "^5.2.0",
     "babel-eslint": "^8.0.0",
     "eslint-config-prettier": "^2.5.0",
+    "exp": "^44.0.0",
     "expo": "^20.0.0",
     "native-base": "^2.3.2",
     "prop-types": "^15.5.10",
