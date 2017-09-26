@@ -17,8 +17,8 @@ const Deck = ({
 }) => (
   <View style={[s.flex1, s.justifyAround, s.ph10]}>
     <View style={[s.flex1, s.justifyCenter]}>
-      <H1 style={[s.f30, s.fw6, s.tc]}>{deckName}</H1>
-      <H3 style={[s.gray, s.mt20, s.tc]}>{`(${cardNumberText(
+      <H1 style={[s.f40, s.fw6, s.pv10, s.tc]}>{deckName}</H1>
+      <H3 style={[s.gray, s.mt10, s.tc]}>{`(${cardNumberText(
         deck.length,
       )})`}</H3>
     </View>

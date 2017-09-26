@@ -4,6 +4,9 @@ const styles = StyleSheet.create({
   f30: {
     fontSize: 30,
   },
+  f40: {
+    fontSize: 40,
+  },
   fw6: {
     fontWeight: '600',
   },
