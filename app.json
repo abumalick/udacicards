@@ -1,5 +1,19 @@
 {
   "expo": {
-    "sdkVersion": "20.0.0"
+    "description": "A simple Mobile flashcard demo app for Udacity nanodegree",
+    "icon": "icons/cards.png",
+    "loading": {
+      "icon": "icons/cards.png"
+    },
+    "name": "UdaciCards",
+    "notification": {
+      "color": "#3d51b4",
+      "icon": "icons/cards-notif.png"
+    },
+    "slug": "udacicards",
+    "sdkVersion": "20.0.0",
+    "primaryColor": "#3d51b4",
+    "privacy": "public",
+    "version": "1.0.0"
   }
 }
