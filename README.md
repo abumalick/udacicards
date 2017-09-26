@@ -4,6 +4,8 @@ You can test the app with Expo app by going to this url:
 
 <https://expo.io/@abumalick/udacicards>
 
+You can also download the `.apk` file from [here](build/udacicards-1.0.0.apk)
+
 ## Table of Contents
 
 -   [Available Scripts](#available-scripts)
