@@ -2,17 +2,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {ScrollView, TouchableOpacity, View} from 'react-native'
-import {
-  Body,
-  Button,
-  Card,
-  CardItem,
-  Fab,
-  H1,
-  H3,
-  Right,
-  Text,
-} from 'native-base'
+import {Button, Fab, H1, H3, Text} from 'native-base'
 import {MaterialCommunityIcons} from '@expo/vector-icons'
 import s from '../styles'
 import {cardNumberText} from '../utils'
@@ -41,27 +31,33 @@ const Decks = ({
                 navigation.navigate('Deck', {deckName})
               }}
             >
-              <Card pointerEvents="none">
-                <CardItem>
+              <View
+                style={[
+                  s.card,
+                  s.pa10,
+                  s.flexRow,
+                  s.justifyBetween,
+                  s.itemsCenter,
+                ]}
+              >
+                <View style={[s.flexRow, s.itemsCenter]}>
                   <MaterialCommunityIcons
                     color={'#ccc'}
                     name="cards"
                     size={32}
                   />
-                  <Body style={s.ml10}>
+                  <View style={s.ml10}>
                     <Text>{deckName}</Text>
                     {/*  $FlowBug: length: Property cannot be accessed on mixed */}
                     <Text note>{cardNumberText(deck.length)}</Text>
-                  </Body>
-                  <Right>
-                    <MaterialCommunityIcons
-                      color={'#ccc'}
-                      name="arrow-right"
-                      size={32}
-                    />
-                  </Right>
-                </CardItem>
-              </Card>
+                  </View>
+                </View>
+                <MaterialCommunityIcons
+                  color={'#ccc'}
+                  name="arrow-right"
+                  size={32}
+                />
+              </View>
             </TouchableOpacity>
           ))}
         </ScrollView>

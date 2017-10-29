@@ -2,7 +2,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {TouchableOpacity, View} from 'react-native'
-import {Body, Button, Card, CardItem, Content, H1, H2, Text} from 'native-base'
+import {Button, Content, H1, H2, Text} from 'native-base'
 import {MaterialCommunityIcons} from '@expo/vector-icons'
 import {clearLocalNotification, setLocalNotification} from '../utils'
 import s from '../styles'
@@ -65,31 +65,25 @@ class Quiz extends React.Component {
         <Content padder>
           <Text style={s.mt10}>{`${position + 1} / ${deck.length}`}</Text>
           <TouchableOpacity onPress={this.flipCard}>
-            <Card pointerEvents="none">
-              <CardItem>
-                <Body style={[s.pa10, s.itemsCenter]}>
-                  <MaterialCommunityIcons
-                    color={'#ccc'}
-                    name={
-                      questionSide
-                        ? 'comment-question-outline'
-                        : 'information-outline'
-                    }
-                    size={40}
-                  />
-                  <Text style={[s.pv10, s.f30, s.fw6]}>
-                    {questionSide
-                      ? deck[position].question
-                      : deck[position].answer}
-                  </Text>
-                  <Text style={[s.mt10, s.lightGray]}>
-                    {questionSide
-                      ? 'Click to show Answer'
-                      : 'Click to show Question'}
-                  </Text>
-                </Body>
-              </CardItem>
-            </Card>
+            <View style={[s.w100, s.pa20, s.itemsCenter, s.card]}>
+              <MaterialCommunityIcons
+                color={'#ccc'}
+                name={
+                  questionSide
+                    ? 'comment-question-outline'
+                    : 'information-outline'
+                }
+                size={40}
+              />
+              <Text style={[s.pv10, s.f30, s.fw6, s.tc]}>
+                {questionSide ? deck[position].question : deck[position].answer}
+              </Text>
+              <Text style={[s.mt10, s.lightGray]}>
+                {questionSide
+                  ? 'Click to show Answer'
+                  : 'Click to show Question'}
+              </Text>
+            </View>
           </TouchableOpacity>
           <Button block onPress={() => this.next(true)} style={s.mt20} success>
             <Text>Correct</Text>

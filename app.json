@@ -11,18 +11,17 @@
       "icon": "icons/cards-notif.png"
     },
     "slug": "udacicards",
-    "sdkVersion": "20.0.0",
+    "sdkVersion": "22.0.0",
     "primaryColor": "#3d51b4",
     "privacy": "public",
     "version": "1.0.0",
     "android": {
       "icon": "icons/cards.png",
       "package": "net.asbab.udacicards",
-      "versionCode": "10000",
-      "versionName": "1.0.0"
+      "versionCode": 10000
     },
     "ios": {
-      "buildNumber": "10000",
+      "buildNumber": "1.0.0",
       "bundleIdentifier": "net.asbab.udacicards"
     }
   }
