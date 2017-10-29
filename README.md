@@ -1,10 +1,33 @@
+# UdaciCards: React Native project for udacity
+
+## Presentation
+
+This is a React Native app (Android & iOS) that allows users to study collections of flashcards. The app allow users to create different categories of flashcards called "decks", add flashcards to those decks, then take quizzes on those decks.
+
+This is a project developed for learning purpose only and is probably completely useless for real users. A lot of things need to be implemented to be a useful app.
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
+
+## Test the app
+
+This app have been tested with `Expo` app on a real android device and a iOS simulator. The built `apk` have been tested on a real android device.
+
+### With Expo app:
 
 You can test the app with Expo app by going to this url:
 
 <https://expo.io/@abumalick/udacicards>
 
+### With the android apk
+
 You can also download the `.apk` file from [here](build/udacicards-1.0.0.apk)
+
+## Build the app from this repository
+
+- clone the repository
+- install packages with `yarn` or `npm install`
+- run the app with `yarn start` or `npm run start`
+- scan the barcode/manually enter the url with `Expo` app on your phone or in a Android/iOS simulator
 
 ## Table of Contents
 
