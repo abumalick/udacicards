@@ -4,7 +4,8 @@ import {connect} from 'react-redux'
 import {TouchableOpacity, View} from 'react-native'
 import {Button, Content, H1, H2, Text} from 'native-base'
 import {MaterialCommunityIcons} from '@expo/vector-icons'
-import {clearLocalNotification, setLocalNotification} from '../utils'
+import {setNotification} from '../actions/notification'
+
 import s from '../styles'
 
 class Quiz extends React.Component {
@@ -23,10 +24,12 @@ class Quiz extends React.Component {
   }
   props: {
     deck: Array<Object>,
+    dispatch: Function,
     navigation: Object,
   }
   changeNotificationForTomorrow = () => {
-    clearLocalNotification().then(setLocalNotification)
+    const {dispatch} = this.props
+    dispatch(setNotification({force: true}))
   }
   flipCard = () => {
     this.setState(state => ({questionSide: !state.questionSide}))

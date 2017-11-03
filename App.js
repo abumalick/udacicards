@@ -1,12 +1,10 @@
 // @flow
-
 import * as React from 'react'
 import {AppLoading, Constants, Font} from 'expo'
 import {StatusBar, View} from 'react-native'
 import Navigator from './Navigator'
 import ReduxProvider from './components/ReduxProvider'
 import s from './styles'
-import {setLocalNotification} from './utils'
 
 export default class App extends React.Component {
   state: {isReady: boolean} = {
@@ -14,9 +12,6 @@ export default class App extends React.Component {
   }
   componentWillMount() {
     this.loadFonts()
-  }
-  componentDidMount() {
-    setLocalNotification()
   }
   async loadFonts() {
     await Font.loadAsync({
