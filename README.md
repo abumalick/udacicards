@@ -12,6 +12,8 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 
 This app have been tested with `Expo` app on a real android device and a iOS simulator. The built `apk` have been tested on a real android device.
 
+The notifications works very well on android. But I experienced problems to set it up on iOS simulator, `Permissions.askAsync(Permissions.NOTIFICATIONS)` kept returning an `undetermined` status, even after I approved the permission. The code is in actions/notification L29.
+
 ### With Expo app:
 
 You can test the app with Expo app by going to this url:
@@ -27,7 +29,7 @@ You can also download the `.apk` file from [here](build/udacicards-1.0.0.apk)
 - clone the repository
 - install packages with `yarn` or `npm install`
 - run the app with `yarn start` or `npm run start`
-- scan the barcode/manually enter the url with `Expo` app on your phone or in a Android/iOS simulator
+- scan the barcode/manually enter the url in `Expo` app on your phone or in a Android/iOS simulator
 
 ## Table of Contents
 
