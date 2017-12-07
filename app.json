@@ -14,14 +14,14 @@
     "sdkVersion": "22.0.0",
     "primaryColor": "#3d51b4",
     "privacy": "public",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "android": {
       "icon": "icons/cards.png",
       "package": "net.asbab.udacicards",
       "versionCode": 10000
     },
     "ios": {
-      "buildNumber": "1.0.0",
+      "buildNumber": "1.1.0",
       "bundleIdentifier": "net.asbab.udacicards"
     }
   }
